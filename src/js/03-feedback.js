@@ -28,7 +28,7 @@ function insertFormValue() {
   const value = localStorage.getItem(STORAGE_KEY);
   if (value) {
     const formValueJSON = JSON.parse(value);
-    const { email, message } = formValueJSON;
+    const { email = '', message = '' } = formValueJSON;
     refs.input.value = email;
     refs.textarea.value = message;
   }
