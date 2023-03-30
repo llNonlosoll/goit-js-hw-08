@@ -13,7 +13,10 @@ refs.form.addEventListener('submit', onFormSubmit);
 
 insertFormValue();
 
-const formValue = {};
+const formValue = {
+  email: refs.input.value,
+  message: refs.textarea.value,
+};
 
 function onInput(evt) {
   formValue[evt.target.name] = evt.target.value;
@@ -25,7 +28,7 @@ function insertFormValue() {
   const value = localStorage.getItem(STORAGE_KEY);
   if (value) {
     const formValueJSON = JSON.parse(value);
-    const { email = '', message = '' } = formValueJSON;
+    const { email, message } = formValueJSON;
     refs.input.value = email;
     refs.textarea.value = message;
   }
