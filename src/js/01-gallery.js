@@ -1,9 +1,9 @@
 // Імпорт об'єктів галереї
 import { galleryItems } from './gallery-items';
 
-// Імпорт стилів
+// Імпорт стилів SimpleLightbox
 import SimpleLightbox from 'simplelightbox';
-// Додатковий імпорт стилів
+// Додатковий імпорт стилів SimpleLightbox
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 // Створюємо галарею
