@@ -5,13 +5,13 @@ import Vimeo from '@vimeo/player';
 import throttle from 'lodash.throttle';
 
 // Створюємо ключ для зберігання даних у сховищі
-const STORAGE_KEY = 'current-time';
+const STORAGE_KEY = 'videoplayer-current-time';
 
 // Ініціалізуємо plugin Vimeo
 const iframe = document.querySelector('iframe');
 const player = new Vimeo(iframe);
 
-player.on('timeupdate', throttle(onPlay, 500));
+player.on('timeupdate', throttle(onPlay, 1000));
 
 //  Функція для зберігання часу відтворення відео у сховищі
 function onPlay(data) {
