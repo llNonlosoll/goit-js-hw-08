@@ -44,7 +44,7 @@ function insertFormValue() {
 // Функція для очищення сховища при Submit
 function onFormSubmit(evt) {
   evt.preventDefault();
-  console.log(localStorage.getItem(STORAGE_KEY));
+  console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
   evt.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
